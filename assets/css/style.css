@@ -273,15 +273,26 @@ header {
   margin: 0 auto;
 }
 
-.device-img {
+.device-images {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-.device-img img {
+.device-images img {
   width: 100%;
-  max-width: 600px;
+  max-width: calc(50% - 1rem); /* Side by side on desktop */
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(32, 115, 223, 0.15);
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .device-images img {
+    max-width: 100%;
+  }
 }
 
 /* Profile Section */
