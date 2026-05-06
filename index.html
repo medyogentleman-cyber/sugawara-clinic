@@ -1,150 +1,380 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>菅原接骨院｜埼玉県新座市 - KINETIC LAB-Link導入施設</title>
-  <meta name="description" content="埼玉県新座市の菅原接骨院。トップアスリートを支える「BCトータルバランスシステム」と最新AIデバイス「KINETIC LAB-Link」を活用した先進的な施術を提供します。">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>菅原接骨院 鍼灸マッサージ院 | 完全紹介制の身体チューニング</title>
+  <meta name="description" content="キネティックラボセンサーによる科学的解析と、東洋の叡智が融合する完全紹介制の鍼灸マッサージ院。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#005088',
+            ecru: '#f3f0df',
+            mint: '#11caa0',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            serif: ['"Noto Serif JP"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f3f0df;
+      color: #333333;
+    }
+    .text-vertical {
+      writing-mode: vertical-rl;
+    }
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .bg-texture {
+      background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23005088" fill-opacity="0.05" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E');
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  </style>
 </head>
-<body>
+<body class="font-sans antialiased text-gray-800 bg-ecru bg-texture">
 
-  <!-- Header -->
-  <header>
-    <div class="container header-inner">
-      <div class="logo">菅原接骨院</div>
-      <nav class="nav-links">
-        <a href="#about">当院の強み</a>
-        <a href="#device">KINETIC LAB-Link</a>
-        <a href="#profile">院長紹介</a>
-        <a href="#access">アクセス</a>
-        <a href="#contact">お問い合わせ</a>
-      </nav>
-    </div>
-  </header>
+<!-- Header -->
+<header class="fixed w-full z-50 transition-all duration-300 bg-navy/95 backdrop-blur-md text-white shadow-md py-4">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <a href="#" class="font-serif text-xl md:text-2xl tracking-widest font-bold text-white hover:text-ecru transition">
+      菅原接骨院 <span class="text-sm md:text-base font-serif font-light ml-2">鍼灸マッサージ院</span>
+    </a>
+    <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-light tracking-wide">
+      <a href="#system" class="hover:text-mint transition">BCトータルバランスシステム</a>
+      <a href="#about" class="hover:text-mint transition">ご挨拶</a>
+      <a href="#access" class="hover:text-mint transition">アクセス</a>
+      <a href="#contact" class="hover:text-mint transition">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-slider">
-      <!-- AI Generated Images as placeholders -->
-      <div class="hero-slide" style="background-image: url('assets/images/hero_director.png');"></div>
-      <div class="hero-slide" style="background-image: url('assets/images/hero_therapy.png');"></div>
-      <div class="hero-slide" style="background-image: url('assets/images/hero_device.png');"></div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 z-0 bg-ecru">
+    <img src="image/wide-sugawara.png" alt="Hero Background" class="w-full h-full object-cover opacity-90">
+    <div class="absolute inset-0 bg-gradient-to-r from-ecru/40 via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ecru/30"></div>
+  </div>
+  
+  <div class="relative z-10 container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+    <div class="w-full md:w-2/3 mb-12 md:mb-0 fade-in-up" style="animation-delay: 0.2s;">
+      <h2 class="text-mint font-sans tracking-[0.2em] mb-4 text-sm md:text-base font-bold drop-shadow-md">BCトータルバランスシステム × ORIENTAL WISDOM</h2>
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 text-navy font-bold tracking-wider drop-shadow-sm">
+        アスリートの身体を<br>
+        根本から整える。
+      </h1>
+      <p class="font-sans text-lg md:text-xl leading-relaxed text-gray-900 tracking-wide font-medium drop-shadow-sm bg-white/40 backdrop-blur-md p-4 rounded-lg inline-block">
+        プロも通う完全紹介制の身体チューニング。<br>
+        西洋医療的な科学分析と、<br>
+        東洋医療的な自然の叡智が融合。
+      </p>
     </div>
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-catch">トップアスリートを支える<br>『<span class="highlight">BCトータルバランスシステム</span>』を、<br>新座市の皆様へ。</h1>
-        <p style="margin-bottom: 2rem; color: var(--text-light); font-size: 1.1rem; font-weight: 500;">
-          最新のAIボディバランスセンサーと、確かな理論に基づく手技で、<br>あなたの「本当の身体の繋がり」を取り戻します。
+    
+    <div class="hidden md:block w-auto pl-12 border-l border-navy/30 fade-in-up" style="animation-delay: 0.5s;">
+      <p class="text-vertical font-serif text-2xl tracking-[0.3em] text-navy">
+        静かに、確実へ。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 理念 Section -->
+<section id="philosophy" class="py-24 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <div class="text-center mb-16 fade-in-up">
+      <span class="text-mint font-bold tracking-widest text-sm mb-2 block">PHILOSOPHY</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-navy">当院の理念</h2>
+      <div class="w-12 h-0.5 bg-mint mx-auto mt-6"></div>
+    </div>
+    
+    <div class="space-y-12 font-serif text-lg leading-loose text-gray-700">
+      <div class="fade-in-up" style="animation-delay: 0.1s;">
+        <h3 class="text-2xl text-navy mb-4 font-bold">「患者様(被術者)」と「施術者」との共鳴</h3>
+        <p>
+          施術とは、一方的に施すものではありません。<br>
+          施術者の「与える力」と、患者様の「受け取る力」の波長がぴたりと合った時、初めて真の治癒力が発揮されます。当院では、この「共鳴」プロセスを最も重要視し、対話・センサー分析・触手よる感覚を通じてあなたの身体の声を聴き取ります。
         </p>
-        <a href="https://karadarefre.jp/facility/99133/" target="_blank" rel="noopener noreferrer" class="btn-cta">
-          EPARKで予約する
+      </div>
+
+      <div class="fade-in-up" style="animation-delay: 0.2s;">
+        <h3 class="text-2xl text-navy mb-4 font-bold">科学的で論理的な施術</h3>
+        <p>
+          身体の状態は日々変わります。センサーによって数値化された化学的な把握と分析、それを人間の感覚や自然の状況によって論理的に組み立て行い、施術に反映します。
+        </p>
+      </div>
+      
+      <div class="fade-in-up" style="animation-delay: 0.3s;">
+        <h3 class="text-2xl text-navy mb-4 font-bold">完全紹介制という覚悟</h3>
+        <p>
+          当院が完全紹介制をとっているのは、決して敷居を高くするためではありません。<br>
+          「信頼の輪」を守り、ご縁のあった一人ひとりの身体と極限まで向き合うための、私たちなりの覚悟です。<br>
+          限られた時間と空間の中で、妥協のない最高峰の身体チューニングを提供することを目的としています。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BC Total Balance System Section -->
+<section id="system" class="py-24 bg-navy text-white relative">
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+  </div>
+  
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 fade-in-up">
+      <span class="text-mint font-bold tracking-widest text-sm mb-2 block">METHOD</span>
+      <h2 class="font-serif text-3xl md:text-4xl">BCトータルバランスシステム</h2>
+      <div class="w-12 h-0.5 bg-mint mx-auto mt-6"></div>
+    </div>
+    
+    <!-- 35年の軌跡 & 体内時計 -->
+    <div class="max-w-5xl mx-auto mb-24 space-y-8 fade-in-up" style="animation-delay: 0.1s;">
+      <div class="flex flex-col lg:flex-row gap-12 items-center bg-white/5 border border-white/10 p-8 md:p-12 rounded-2xl backdrop-blur-sm shadow-xl">
+        <div class="w-full lg:w-1/2">
+          <h3 class="text-mint font-bold text-2xl mb-6 font-serif border-l-4 border-mint pl-4">35年の軌跡と革新</h3>
+          <p class="text-base leading-loose text-gray-200 mb-8">
+            矢田氏が35年以上の歳月をかけて確立した「BCトータルバランスシステム」は、単なる筋力強化ではなく、<span class="text-white font-bold text-lg border-b border-mint/50 pb-1">「細胞レベルからの生体リズム回復」</span>と<span class="text-white font-bold text-lg border-b border-mint/50 pb-1">「キネティックチェーン（運動連鎖）」</span>の最適化に焦点を当てています。
+          </p>
+          
+          <h4 class="text-mint font-bold text-xl mb-4 font-serif">体内時計（時計遺伝子）のリセット</h4>
+          <p class="text-base leading-loose text-gray-200">
+            現代の心理的緊張によって乱れた生体リズムを、自然界の周期（月の満ち欠けや地球の自転など）と同調させることで、人間本来の自然治癒力を引き出します。
+          </p>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <div class="bg-white p-2 rounded-xl shadow-2xl transform md:rotate-2 hover:rotate-0 transition duration-500">
+            <img src="image/Bodytime.jpg" alt="体内時計のリセット" class="w-full h-auto rounded-lg object-contain">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-16 fade-in-up" style="animation-delay: 0.2s;">
+      <span class="text-mint font-bold tracking-widest text-sm mb-2 block">3 PILLARS</span>
+      <h3 class="text-2xl md:text-3xl font-serif text-white">メソッドを構成する3つの柱</h3>
+      <div class="w-12 h-0.5 bg-white/20 mx-auto mt-6"></div>
+    </div>
+    
+    <div class="max-w-5xl mx-auto space-y-24">
+      <!-- Step 1 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-12 fade-in-up">
+        <div class="w-full md:w-5/12">
+          <div class="text-mint text-7xl font-serif mb-2 opacity-80 leading-none">01</div>
+          <h4 class="text-2xl font-bold mb-6 font-serif text-white flex items-center">
+            BCアナライズ <span class="ml-4 text-sm font-sans font-medium text-navy bg-mint px-3 py-1 rounded-full tracking-wider">測る</span>
+          </h4>
+          <p class="text-base leading-loose text-gray-300 font-light">
+            「キネティックラボセンサー（伍六七）」を用いて身体の歪みを数値化し、不調の根本原因を解析します。本人が気づかない動作の癖を早期に発見します。
+          </p>
+        </div>
+        <div class="w-full md:w-7/12 relative">
+          <div class="absolute inset-0 bg-mint/20 rounded-xl transform -translate-x-4 translate-y-4 -z-10"></div>
+          <div class="relative w-full aspect-video rounded-xl shadow-2xl border border-white/10 overflow-hidden bg-[#eef1f0]">
+            <img src="image/sensor-lens.png" alt="BCアナライズ" class="absolute top-1/2 left-1/2 w-[150%] h-[150%] object-contain transform -translate-x-1/2 -translate-y-1/2 -rotate-90" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="flex flex-col md:flex-row items-center gap-12 fade-in-up">
+        <div class="w-full md:w-5/12">
+          <div class="text-mint text-7xl font-serif mb-2 opacity-80 leading-none">02</div>
+          <h4 class="text-2xl font-bold mb-6 font-serif text-white flex items-center">
+            BCバランス療法 <span class="ml-4 text-sm font-sans font-medium text-navy bg-mint px-3 py-1 rounded-full tracking-wider">整える</span>
+          </h4>
+          <p class="text-base leading-loose text-gray-300 font-light">
+            解析結果よりボディバランス改善を行います。細胞膜の構成成分を主成分とした専用の施術材料を使用し、身体の浅層から深層まで優しくアプローチします。
+          </p>
+        </div>
+        <div class="w-full md:w-7/12 relative">
+          <div class="absolute inset-0 bg-mint/20 rounded-xl transform translate-x-4 translate-y-4 -z-10"></div>
+          <div class="grid grid-cols-2 gap-4">
+            <img src="image/sensorscreen.png" alt="BCバランス療法 1" class="rounded-xl w-full h-48 md:h-80 object-cover shadow-xl border border-white/10 object-top" onerror="this.style.display='none'">
+            <img src="image/Tools_non.png" alt="BCバランス療法 2" class="rounded-xl w-full h-48 md:h-80 object-cover shadow-xl border border-white/10 object-center" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-12 fade-in-up">
+        <div class="w-full md:w-5/12">
+          <div class="text-mint text-7xl font-serif mb-2 opacity-80 leading-none">03</div>
+          <h4 class="text-2xl font-bold mb-6 font-serif text-white flex items-center">
+            BCエクササイズ <span class="ml-4 text-sm font-sans font-medium text-navy bg-mint px-3 py-1 rounded-full tracking-wider">鍛える</span>
+          </h4>
+          <p class="text-base leading-loose text-gray-300 font-light">
+            月の動きと同期する「太陰鼓動」や、地球の動きと同期する「太陽鼓動」といった独自の呼吸エクササイズにより、身体の軸を安定させます。
+          </p>
+        </div>
+        <div class="w-full md:w-7/12 relative">
+          <div class="absolute inset-0 bg-mint/20 rounded-xl transform -translate-x-4 translate-y-4 -z-10"></div>
+          <div class="grid grid-cols-2 gap-4">
+            <img src="image/tools.png" alt="BCエクササイズ 1" class="rounded-xl w-full h-48 md:h-80 object-cover shadow-xl border border-white/10 object-center" onerror="this.style.display='none'">
+            <img src="image/Tube-1.png" alt="BCエクササイズ 2" class="rounded-xl w-full h-48 md:h-80 object-cover shadow-xl border border-white/10 object-center" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Moon Phase & Care Section -->
+<section id="moon" class="py-24 bg-ecru">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <div class="text-center mb-12 fade-in-up">
+      <span class="text-mint font-bold tracking-widest text-sm mb-2 block">NATURE RHYTHM</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-navy">月の満ち欠けとケア</h2>
+      <div class="w-12 h-0.5 bg-mint mx-auto mt-6"></div>
+    </div>
+    
+    <div class="fade-in-up space-y-10" style="animation-delay: 0.2s;">
+      <p class="font-sans text-gray-700 leading-loose text-base md:text-lg">
+        人間の身体は、約70%が水分で構成されています。<br>
+        潮の満ち引きが月の引力によって引き起こされるように、私たちの身体もまた、自然のリズムと密接に連動しています。
+      </p>
+
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8 py-4">
+        <img src="image/Taiinkodou_0503.png" alt="太陰弧動" class="w-full md:w-1/2 h-auto drop-shadow-xl rounded-2xl border border-white/50">
+        <img src="image/Taiyoukodou_0503.png" alt="太陽弧動" class="w-full md:w-1/2 h-auto drop-shadow-xl rounded-2xl border border-white/50">
+      </div>
+
+      <p class="font-sans text-gray-700 leading-loose text-base md:text-lg">
+        当院では、その日の月の満ち欠けや、患者様自身のバイオリズム（状況）に合わせて、アプローチの強度やツールを緻密に使い分けます。自然の理に逆らわず、身体が最も受け入れやすい状態を見極めてケアを行います。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="py-24 bg-white">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="text-center mb-16 fade-in-up">
+      <span class="text-mint font-bold tracking-widest text-sm mb-2 block">ABOUT US</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-navy">菅原接骨院 院長：菅原 広幸</h2>
+      <p class="mt-4 font-light text-gray-600">トップアスリートのコンディショニング理論の原点</p>
+      <div class="w-12 h-0.5 bg-mint mx-auto mt-6"></div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row gap-12 items-center mb-16 fade-in-up" style="animation-delay: 0.1s;">
+      <div class="w-full md:w-1/2">
+        <p class="font-sans text-gray-700 leading-loose mb-6">
+          ロサンゼルスドジャース 山本由伸投手のトレーナーとしても知られる矢田修氏のもとで住み込みで修業し、キネティックフォーラムの立ち上げ当初よりBCトータルバランスの研究と向上に人生を注いできました。
+        </p>
+        <p class="font-sans text-gray-700 leading-loose">
+          患者様との信頼関係を醸造してお互いに真剣に向き合うからこそ、最高の結果が生まれるのだと信じております。当院の施術は力任せではなく、ポイントを押さえ、身体のバランスを整うことを感じていただき、それが土台となってパフォーマンス向上に繋がることを感じて頂けましたら幸いです。
+        </p>
+      </div>
+      <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+        <img src="image/vertical-sugawara.png" alt="菅原 広幸" class="w-full h-48 object-cover rounded-lg shadow-md object-top" onerror="this.style.display='none'">
+        <img src="image/Bed-stand-sensor.png" alt="Bed-stand-sensor" class="w-full h-48 object-cover rounded-lg shadow-md object-center" onerror="this.src='image/Bed-stand-sensor.jpg'">
+        <img src="image/PXL_20260307_091826734.jpg" alt="施術風景1" class="w-full h-48 object-cover rounded-lg shadow-md object-center" onerror="this.src='image/PXL_20260307_091826734.png'">
+        <img src="image/PXL_20260307_095323790.MP.jpg" alt="施術風景2" class="w-full h-48 object-cover rounded-lg shadow-md object-center" onerror="this.src='image/PXL_20260307_095323790.MP.png'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KINETIC LAB-Link Section -->
+<section id="kinetic-link" class="py-24 bg-navy text-white relative overflow-hidden">
+  <div class="absolute inset-0 z-0 opacity-10">
+    <img src="image/ikiiki_banner_900x600.png" class="w-full h-full object-cover blur-sm" onerror="this.src='image/ikiiki_banner_900x600.jpg'">
+  </div>
+  <div class="container mx-auto px-6 max-w-5xl relative z-10">
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center gap-12 fade-in-up">
+      <div class="w-full md:w-1/2">
+        <span class="text-mint font-bold tracking-widest text-sm mb-2 block">AI PERSONAL TRAINER</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-white mb-2">KINETIC LAB-Link</h2>
+        <p class="text-gray-300 font-medium tracking-widest text-sm mb-6">日々のセルフコンディショニング</p>
+        <div class="w-12 h-0.5 bg-mint mb-8"></div>
+        <p class="font-sans text-xl md:text-2xl font-bold leading-relaxed mb-6 tracking-wide drop-shadow-md">
+          1日わずか約82円(5年版)で、<br>
+          ドジャース山本由伸投手の<br>
+          パーソナルトレーナー<br>
+          <span class="text-mint border-b-2 border-mint pb-1">矢田修AI</span>があなたの専属に。
+        </p>
+        <div class="w-full h-px bg-white/20 mb-6"></div>
+        <p class="font-sans text-gray-200 leading-loose font-light mb-8">
+          当院の施術基盤「BCトータルバランスシステム」の叡智が、いつでもあなたの手元に。日々の測定から指導まで、AIがあなた専用のサポートを提供します。
+        </p>
+        <a href="https://www.kinetic-lab.com/link/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-mint hover:bg-[#0fae8a] text-navy font-bold py-3 px-8 rounded transition duration-300 shadow-lg tracking-wider text-sm md:text-base group">
+          KINETIC LAB-Link公式サイトはこちら
+          <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col gap-6">
+        <a href="https://www.kinetic-lab.com/link/" target="_blank" rel="noopener noreferrer" class="block overflow-hidden rounded-xl shadow-2xl border border-white/20">
+          <img src="image/ikiiki_banner_900x600.png" alt="KINETIC LAB-Link" class="w-full h-auto transform hover:scale-105 transition duration-500" onerror="this.src='image/ikiiki_banner_900x600.jpg'">
+        </a>
+        <a href="https://www.kinetic-lab.com/link/" target="_blank" rel="noopener noreferrer" class="block overflow-hidden rounded-xl shadow-2xl border border-white/20">
+          <img src="image/2026-02-23_16h16_07.png" alt="KINETIC LAB-Link Feature" class="w-full h-auto transform hover:scale-105 transition duration-500" onerror="this.src='image/2026-02-23_16h16_07.jpg'">
         </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="container">
-    <h2 class="section-title fade-in">当院の強み</h2>
+<!-- Access Section -->
+<section id="access" class="py-24 bg-ecru">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16 fade-in-up">
+      <span class="text-mint font-bold tracking-widest text-sm mb-2 block">ACCESS</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-navy">アクセス</h2>
+      <div class="w-12 h-0.5 bg-mint mx-auto mt-6"></div>
+    </div>
     
-    <div class="feature-box fade-in">
-      <div class="feature-text">
-        <h3>世界が認めたメソッド<br>「BCトータルバランスシステム」</h3>
-        <p>キネティックフォーラム代表・矢田修先生が提唱する「BCトータルバランスシステム」を導入しています。</p>
-        <p>このシステムは、MLBドジャースの山本由伸投手など、世界のトップアスリートのパフォーマンス向上と怪我予防を支える、確かな実績と理論に基づく画期的なメソッドです。</p>
-      </div>
-      <div class="feature-img">
-        <img src="assets/images/hero_therapy.png" alt="矢田修先生の施術風景イメージ">
-      </div>
-    </div>
-
-    <div class="feature-box fade-in">
-      <div class="feature-text">
-        <h3>新座市で受けられる希少な技術</h3>
-        <p>菅原接骨院の院長は、矢田修先生の直弟子として直接指導を受けてきました。</p>
-        <p>遠方まで足を運ばずとも、この高度で専門的なトップレベルの施術を、埼玉県新座市で受けることが可能です。地域の皆様の健康とスポーツライフを最大限にサポートします。</p>
-      </div>
-      <div class="feature-img">
-        <img src="assets/images/mentor_photo.png" alt="矢田先生と菅原院長">
-      </div>
-    </div>
-  </section>
-
-  <!-- Device Section -->
-  <section id="device" class="device-section fade-in">
-    <div class="container">
-      <h2 class="section-title">最新デバイス「KINETIC LAB-Link」</h2>
-      
-      <div class="device-card">
-        <div class="device-images">
-          <img src="assets/images/device_overlay_sm.jpg" alt="KINETIC LAB-Link 施術風景">
-          <img src="assets/images/device_bodycheck_sm.jpg" alt="KINETIC LAB-Link ガイダンスビデオ">
-        </div>
-        <h3 style="font-size: 1.5rem; color: var(--primary-dark); margin-bottom: 1rem;">客観的データが導く、次世代の施術</h3>
-        <p style="margin-bottom: 1.5rem;">
-          当院では、AI搭載の最新ボディバランスセンサー「KINETIC LAB-Link」を活用しています。
-          勘や経験だけでなく、客観的な動作データと生体情報を組み合わせることで、一人ひとりに最適なアプローチ法を導き出します。
-        </p>
-        
-        <div style="background: white; padding: 2rem; border-radius: 16px; margin-top: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: left;">
-          <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">正規代理店としてのサポート</h4>
-          <p>
-            菅原接骨院は「KINETIC LAB-Link」の正規代理店です。当院での施術体験だけでなく、ご自宅での日々のケア用や、他施設様向けのデバイス導入・購入相談も随時受け付けております。
+    <div class="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto items-stretch">
+      <!-- Address and Map Card -->
+      <div class="w-full lg:w-2/3 flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-xl">
+        <div class="w-full md:w-5/12 p-8 lg:p-10 flex flex-col justify-center bg-navy text-white">
+          <h3 class="text-xl lg:text-2xl font-serif mb-4 lg:mb-6">菅原接骨院<br><span class="text-sm lg:text-base font-sans font-light">鍼灸マッサージ院</span></h3>
+          <p class="mb-2 font-light text-sm lg:text-base">院長：菅原 広幸</p>
+          <div class="w-8 h-px bg-mint mb-4 lg:mb-6"></div>
+          <p class="font-light text-sm leading-relaxed mb-4">
+            〒352-0011<br>
+            埼玉県新座市野火止5-3-42
           </p>
-          <p style="margin-top: 1rem;">
-            <a href="#contact" style="font-weight: 700; text-decoration: underline;">導入・購入のご相談はこちらから</a>
+          <p class="text-xs lg:text-sm font-light text-gray-300 mt-auto">
+            ※当院は完全紹介制のため、<br>電話番号は非公開としております。
           </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Profile Section -->
-  <section id="profile" class="container fade-in">
-    <h2 class="section-title">院長プロフィール</h2>
-    
-    <div class="profile-content">
-      <div class="profile-imgs">
-        <img src="assets/images/hero_director.png" alt="菅原院長">
-      </div>
-      <div class="profile-text">
-        <span class="profile-title">菅原接骨院 院長</span>
-        <h3>菅原 （院長名）</h3>
-        <p style="margin-top: 1.5rem; margin-bottom: 1rem;">
-          私と「BCトータルバランスシステム」の出会いは、自身の治療家としての壁を感じていた時でした。矢田修先生の理論に触れ、身体の連動性の奥深さに感銘を受け、直弟子として長年学ばせていただきました。
-        </p>
-        <p style="margin-bottom: 1rem;">
-          アスリートからご高齢の方まで、身体の痛みや不調の原因は「バランスの崩れ」にあります。トップアスリートが実践する最先端のコンディショニング理論を、地域の皆様にも提供したいという想いで日々施術にあたっています。
-        </p>
-        <p>
-          「KINETIC LAB-Link」という最新AI技術と、受け継がれた手技の融合によって、皆様の健やかな毎日を全力でサポートいたします。
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Access Section -->
-  <section id="access" class="container fade-in">
-    <h2 class="section-title">施設情報とアクセス</h2>
-    
-    <div class="access-wrapper">
-      <div class="access-info">
-        <h3>菅原接骨院</h3>
-        <ul class="info-list">
-          <li><strong>住所</strong> <span>埼玉県新座市野火止3丁目10-2</span></li>
-          <li><strong>電話番号</strong> <span>048-475-9919</span></li>
-          <li><strong>アクセス</strong> <span>JR武蔵野線「新座駅」より徒歩12分</span></li>
-        </ul>
-        <div style="margin-top: 2rem;">
-          <a href="https://karadarefre.jp/facility/99133/" target="_blank" rel="noopener noreferrer" class="btn-cta" style="padding: 0.8rem 2rem; font-size: 1rem;">予約ページへ進む</a>
-        </div>
-      </div>
-      
-      <div class="access-map">
-        <div class="map-container">
+        <div class="w-full md:w-7/12 h-80 md:h-auto min-h-[300px]">
+          <!-- Google Maps Embed Placeholder -->
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.6548175402096!2d139.55403!3d35.7955519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ea6cxxxxxx%3A0x0!2z5Z-8546b55yM5paw5bqn5biC6YeO54Gr5q2iM-S4gOebru-xMOGoi-i!5e0!3m2!1sja!2sjp!4v1610000000000!5m2!1sja!2sjp" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.331770281488!2d139.555246712391!3d35.80165987241285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ea6ea9671d4b%3A0x6b6d51cd725350!2z44CSMzUyLTAwMTEg5Z-8546b55yM5paw5bqn5biC6YeO54Gr5q2i77WV5LiB55uu77WP4oiS77WSIOOCsOODqeODs-ODieODvOODqw!5e0!3m2!1sja!2sjp!4v1714725000000!5m2!1sja!2sjp" 
             width="100%" 
             height="100%" 
             style="border:0;" 
@@ -154,73 +384,177 @@
           </iframe>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Contact Form Section -->
-  <section id="contact" class="contact-section fade-in">
-    <div class="container">
-      <h2 class="section-title">お問い合わせ</h2>
-      
-      <div class="form-container">
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">
-          施術に関するご予約・ご相談、および「KINETIC LAB-Link」の導入・購入に関するお問い合わせは、下記のフォームよりお気軽にご連絡ください。<br>
-          ※ご予約の場合は可能であればEPARKをご利用ください。
-        </p>
-
-        <form id="contact-form" action="send_mail.php" method="POST">
-          <div class="form-group">
-            <label for="name">お名前 <span class="required">必須</span></label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="例）菅原 太郎" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">メールアドレス <span class="required">必須</span></label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="例）example@email.com" required>
-          </div>
-
-          <div class="form-group">
-            <label for="tel">電話番号 <span style="background:#888; color:white; font-size:0.7rem; padding:2px 6px; border-radius:4px; margin-left:8px;">任意</span></label>
-            <input type="tel" id="tel" name="tel" class="form-control" placeholder="例）090-1234-5678">
-          </div>
-
-          <div class="form-group">
-            <label for="type">お問い合わせ種別 <span class="required">必須</span></label>
-            <select id="type" name="type" class="form-control" required>
-              <option value="" disabled selected>選択してください</option>
-              <option value="施術に関するご相談">施術に関するご相談</option>
-              <option value="KINETIC LAB-Linkの導入・購入に関するご相談">KINETIC LAB-Linkの導入・購入に関するご相談</option>
-              <option value="その他">その他</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
-            <textarea id="message" name="message" class="form-control" placeholder="ご質問やご相談内容をご記入ください" required></textarea>
-          </div>
-
-          <button type="submit" id="submit-btn" class="submit-btn">送信する</button>
-          <div id="form-message"></div>
-        </form>
+      <!-- Instagram Card (Auto-updating Feed Placeholder) -->
+      <div class="w-full lg:w-1/3 bg-white rounded-xl overflow-hidden shadow-xl flex flex-col relative border border-gray-100 min-h-[350px] lg:min-h-[auto]">
+        <div class="flex-grow relative h-full w-full">
+          <!-- Elfsight Instagram Feed -->
+          <script src="https://elfsightcdn.com/platform.js" async></script>
+          <div class="elfsight-app-b911831a-bc00-44c3-a1c0-3edeb77898ac w-full h-full relative z-10" data-elfsight-app-lazy></div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- Floating CTA (Bottom Right) -->
-  <div id="floating-cta" class="floating-cta">
-    <a href="https://karadarefre.jp/facility/99133/" target="_blank" rel="noopener noreferrer" class="btn-cta">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
-      EPARKで予約する
-    </a>
   </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 菅原接骨院 All Rights Reserved.</p>
+<!-- Contact Form Section -->
+<section id="contact" class="py-24 bg-navy text-white">
+  <div class="container mx-auto px-6 max-w-3xl">
+    <div class="text-center mb-16 fade-in-up">
+      <span class="text-mint font-bold tracking-widest text-sm mb-2 block">RESERVATION</span>
+      <h2 class="font-serif text-3xl md:text-4xl">ご予約・お問い合わせ</h2>
+      <div class="w-12 h-0.5 bg-mint mx-auto mt-6"></div>
+      
+      <div class="mt-8 bg-white/10 p-6 rounded-lg backdrop-blur-md border border-white/20 text-left shadow-lg">
+        <h4 class="text-mint font-bold mb-2 flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          完全紹介制についてのお願い
+        </h4>
+        <p class="text-sm leading-relaxed text-gray-200">
+          当院はご紹介者様からのご縁を大切にするため、完全紹介制とさせていただいております。また、施術中の集中を保つため、電話番号は非公開としております。<br>
+          <span class="text-white font-bold mt-2 block">【ご予約の流れ】</span>
+          送信完了後、確認メールにて当院の電話番号をお知らせいたします。その後、院長より直接日程調整のご連絡を差し上げます。
+        </p>
+      </div>
     </div>
-  </footer>
+    
+    <form id="contactForm" class="space-y-6 fade-in-up" style="animation-delay: 0.2s;">
+      <div>
+        <label for="referrer" class="block text-sm font-medium mb-2">ご紹介者様名 <span class="text-navy bg-mint px-2 py-0.5 rounded text-xs ml-2 font-bold">必須</span></label>
+        <input type="text" id="referrer" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded focus:outline-none focus:border-mint transition text-white placeholder-gray-400" placeholder="ご紹介いただいた方のお名前" required>
+      </div>
+      
+      <div>
+        <label for="name" class="block text-sm font-medium mb-2">お名前 <span class="text-navy bg-mint px-2 py-0.5 rounded text-xs ml-2 font-bold">必須</span></label>
+        <input type="text" id="name" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded focus:outline-none focus:border-mint transition text-white placeholder-gray-400" placeholder="菅原 太郎" required>
+      </div>
+      
+      <div>
+        <label for="email" class="block text-sm font-medium mb-2">メールアドレス <span class="text-navy bg-mint px-2 py-0.5 rounded text-xs ml-2 font-bold">必須</span></label>
+        <input type="email" id="email" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded focus:outline-none focus:border-mint transition text-white placeholder-gray-400" placeholder="example@email.com" required>
+      </div>
+      
+      <div>
+        <label for="tel" class="block text-sm font-medium mb-2">電話番号 <span class="text-navy bg-mint px-2 py-0.5 rounded text-xs ml-2 font-bold">必須</span></label>
+        <input type="tel" id="tel" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded focus:outline-none focus:border-mint transition text-white placeholder-gray-400" placeholder="090-1234-5678" required>
+      </div>
+      
+      <div>
+        <label for="concern" class="block text-sm font-medium mb-2">気になる箇所・症状 <span class="text-navy bg-mint px-2 py-0.5 rounded text-xs ml-2 font-bold">必須</span></label>
+        <textarea id="concern" rows="4" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded focus:outline-none focus:border-mint transition text-white placeholder-gray-400" placeholder="現在の症状や、お悩みについてお聞かせください" required></textarea>
+      </div>
 
-  <script src="assets/js/main.js"></script>
+      <!-- Google reCAPTCHA v2 -->
+      <div class="g-recaptcha flex justify-center mt-4 mb-6" data-sitekey="6LelJtwsAAAAANJHZbWELpiYLW_JnSnThOWwckfJ"></div>
+      
+      <div id="formError" class="hidden text-red-400 text-sm text-center font-bold bg-red-900/30 p-3 rounded border border-red-500/50"></div>
+
+      <button type="submit" id="submitBtn" class="w-full bg-mint hover:bg-[#0fae8a] text-navy font-bold py-4 px-8 rounded transition duration-300 shadow-lg tracking-wider text-lg disabled:opacity-50 disabled:cursor-not-allowed">
+        送信する
+      </button>
+    </form>
+
+    <!-- 送信完了画面 (初期状態は非表示) -->
+    <div id="formSuccess" class="hidden text-center bg-white/10 p-10 md:p-12 rounded-xl backdrop-blur-md border border-mint/50 fade-in-up">
+      <svg class="w-16 h-16 text-mint mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <h3 class="text-2xl font-serif font-bold text-mint mb-6">送信が完了いたしました</h3>
+      <p class="text-gray-200 leading-relaxed mb-8">
+        お問い合わせありがとうございます。<br>
+        内容を確認次第、院長より直接ご連絡を差し上げます。<br>
+        お急ぎの場合は、下記のお電話番号までご連絡ください。
+      </p>
+      <div class="bg-navy/80 inline-block px-8 py-5 rounded-lg border border-white/20 shadow-xl">
+        <p class="text-sm text-gray-300 mb-2">お電話でのお問い合わせ</p>
+        <p class="text-3xl font-bold tracking-wider text-white">048-475-9919</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-navy py-8 text-center border-t border-white/10">
+  <div class="container mx-auto px-6">
+    <p class="text-gray-400 text-sm font-light">&copy; 2026 Sugawara Orthopedic Clinic. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Simple intersection observer for fade-in animations
+  document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-up').forEach((el) => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    // フォーム送信処理
+    const form = document.getElementById('contactForm');
+    const successDiv = document.getElementById('formSuccess');
+    const errorDiv = document.getElementById('formError');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // reCAPTCHAのチェック
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+          errorDiv.textContent = 'スパムチェック（私はロボットではありません）にチェックを入れてください。';
+          errorDiv.classList.remove('hidden');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = '送信中...';
+        errorDiv.classList.add('hidden');
+
+        const formData = new FormData();
+        formData.append('referrer', document.getElementById('referrer').value);
+        formData.append('name', document.getElementById('name').value);
+        formData.append('email', document.getElementById('email').value);
+        formData.append('tel', document.getElementById('tel').value);
+        formData.append('concern', document.getElementById('concern').value);
+        formData.append('g-recaptcha-response', recaptchaResponse);
+        
+        try {
+          const response = await fetch('send_mail.php', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // 送信成功時：フォームを非表示にして完了画面を表示
+            form.classList.add('hidden');
+            successDiv.classList.remove('hidden');
+            successDiv.style.animationPlayState = 'running';
+          } else {
+            // 送信失敗時（サーバーエラーなど）
+            errorDiv.textContent = result.message || '送信に失敗しました。';
+            errorDiv.classList.remove('hidden');
+            submitBtn.disabled = false;
+            submitBtn.textContent = '送信する';
+          }
+        } catch (err) {
+          errorDiv.textContent = '通信エラーが発生しました。時間をおいて再度お試しください。';
+          errorDiv.classList.remove('hidden');
+          submitBtn.disabled = false;
+          submitBtn.textContent = '送信する';
+        }
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
