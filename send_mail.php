@@ -26,18 +26,19 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-// Google reCAPTCHA v2 の検証
-// 【重要】 ご自身の「シークレットキー」に置き換えてください
+// Google reCAPTCHA v3 の検証
 $recaptchaSecret = '6LelJtwsAAAAAP6O3ymrIBWBVzqewzJyvaz-0QbT';
-if (!empty($recaptchaSecret) && $recaptchaSecret !== 'YOUR_RECAPTCHA_SECRET_KEY') {
+if (!empty($recaptchaSecret)) {
     if (empty($recaptchaResponse)) {
-        echo json_encode(["success" => false, "message" => "スパムチェック（reCAPTCHA）にチェックを入れてください。"]);
+        echo json_encode(["success" => false, "message" => "スパムチェック用のトークンがありません。画面を更新してお試しください。"]);
         exit;
     }
     $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $recaptchaSecret . '&response=' . $recaptchaResponse);
     $responseData = json_decode($verifyResponse);
-    if (!$responseData->success) {
-        echo json_encode(["success" => false, "message" => "スパムチェックに失敗しました。再度お試しください。"]);
+    
+    // v3はsuccessに加えてscore(0.0〜1.0)が返る。0.5未満はスパムと判定
+    if (!$responseData->success || (isset($responseData->score) && $responseData->score < 0.5)) {
+        echo json_encode(["success" => false, "message" => "ボットによる送信の可能性があるためブロックされました。"]);
         exit;
     }
 }
