@@ -396,6 +396,25 @@
 <!-- KINETIC LAB-Link Section -->
 <div id="kinetic-lab-link"></div>
 <script src="https://kinetic-lab-web.vercel.app/embed/banner.js" async></script>
+<script>
+/* KINETIC LAB affiliate: バナーCTA（Shadow DOM内）を紹介リンクに書き換える */
+(function () {
+  var REF = 'sugawara';
+  function patch() {
+    var h = document.getElementById('kinetic-lab-link');
+    var r = h && h.shadowRoot;
+    var a = r && r.querySelector('a.kll-cta');
+    if (!a) return false;
+    a.href = 'https://store.kinetic-lab.com/?ref=' + REF;
+    return true;
+  }
+  if (patch()) return;
+  var n = 0;
+  var iv = setInterval(function () {
+    if (patch() || ++n > 40) clearInterval(iv);
+  }, 500);
+})();
+</script>
 
 <!-- Access Section -->
 <section id="access" class="py-24 bg-ecru">
