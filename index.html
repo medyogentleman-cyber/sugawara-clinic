@@ -140,6 +140,39 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.5);
     }
+    /* KINETIC LAB-Link（大久保接骨院と同じ自前ブロック） */
+    .kll-sec { background: linear-gradient(160deg, #003a63, #005088); padding: 72px 16px 80px; }
+    .kll-wrap { max-width: 1040px; margin: 0 auto; }
+    .kll-label { color: #11caa0; font-size: 13px; font-weight: 700; letter-spacing: .2em; margin-bottom: 20px; }
+    .kll { background: #fff; color: #1f2937; border-radius: 20px; box-shadow: 0 20px 50px rgba(0, 20, 40, .35); overflow: hidden; }
+    .kll__main { display: grid; grid-template-columns: 1fr; align-items: stretch; }
+    @media (min-width: 900px) { .kll__main { grid-template-columns: 1.05fr 1fr; } }
+    .kll__text { padding: 30px 22px 26px; }
+    @media (min-width: 900px) { .kll__text { padding: 44px 40px 40px; } }
+    .kll__logo { width: 132px; height: auto; display: block; mix-blend-mode: multiply; margin: 0 0 14px -6px; }
+    .kll__eyebrow { font-size: 12px; letter-spacing: .2em; font-weight: 700; color: #0e9f7e; }
+    .kll__title { font-family: "Noto Serif JP", serif; font-size: clamp(21px, 2.6vw, 27px); line-height: 1.55; margin-top: 6px; color: #005088; font-weight: 700; }
+    .kll__price { margin-top: 14px; font-size: 15px; }
+    .kll__price b { font-size: 22px; color: #0e9f7e; }
+    .kll__price small { font-size: 12px; color: #6b7280; }
+    .kll__desc { margin-top: 12px; font-size: 14px; line-height: 1.9; color: #4b5563; }
+    .kll__ctas { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+    .kll__cta { display: inline-block; background: #11caa0; color: #fff; font-weight: 700; padding: 14px 28px; border-radius: 999px; box-shadow: 0 6px 16px rgba(17, 202, 160, .35); transition: background .2s; }
+    .kll__cta:hover { background: #0e9f7e; }
+    .kll__sub { font-size: 13px; color: #005088; text-decoration: underline; text-underline-offset: 3px; }
+    .kll__photo { margin: 0; display: flex; flex-direction: column; background: #0b2f63; }
+    .kll__photo img { flex: 1; width: 100%; min-height: 0; aspect-ratio: 1100/907; object-fit: cover; object-position: 60% 25%; display: block; }
+    .kll__name { background: linear-gradient(90deg, #0a2a5a, #0d3f7a); color: #fff; padding: 14px 22px 16px; line-height: 1.5; }
+    .kll__role { display: block; font-size: 12px; letter-spacing: .04em; opacity: .9; }
+    .kll__person { display: block; font-family: "Noto Serif JP", serif; font-size: 22px; letter-spacing: .12em; margin-top: 2px; }
+    .kll__org { display: block; font-size: 11px; opacity: .75; margin-top: 2px; }
+    .kll__screens { background: #e7f8f3; padding: 24px 16px 26px; border-top: 1px solid rgba(0, 0, 0, .06); }
+    .kll__screens-h { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: .08em; color: #0e9f7e; margin-bottom: 14px; }
+    .kll__screens ul { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 760px; }
+    .kll__screens li { text-align: center; }
+    .kll__screens img { width: 100%; height: auto; display: block; filter: drop-shadow(0 8px 14px rgba(13, 40, 60, .18)); }
+    .kll__screens span { display: block; margin-top: 8px; font-size: 12px; line-height: 1.5; color: #4b5563; }
+    .kll__fine { margin-top: 16px; font-size: 12px; line-height: 1.7; color: rgba(255, 255, 255, .65); }
   </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-ecru bg-texture">
@@ -394,27 +427,46 @@
 </section>
 
 <!-- KINETIC LAB-Link Section -->
-<div id="kinetic-lab-link"></div>
-<script src="https://kinetic-lab-web.vercel.app/embed/banner.js" async></script>
-<script>
-/* KINETIC LAB affiliate: バナーCTA（Shadow DOM内）を紹介リンクに書き換える */
-(function () {
-  var REF = 'sugawara';
-  function patch() {
-    var h = document.getElementById('kinetic-lab-link');
-    var r = h && h.shadowRoot;
-    var a = r && r.querySelector('a.kll-cta');
-    if (!a) return false;
-    a.href = 'https://store.kinetic-lab.com/?ref=' + REF;
-    return true;
-  }
-  if (patch()) return;
-  var n = 0;
-  var iv = setInterval(function () {
-    if (patch() || ++n > 40) clearInterval(iv);
-  }, 500);
-})();
-</script>
+<!-- 2026-11-16：公式埋め込みバナー（banner.js）から、大久保接骨院と同じ自前ブロック（kll）に変更。
+     KINETIC LAB-Link のロゴはブランド規定により白地の上でのみ使用するため、カードは白地。
+     ⚠️ 広告であることが分かる表示（PR ラベル・注記）は外さないこと（ステルスマーケティング規制）。 -->
+<section id="lab" class="kll-sec" aria-label="KINETIC LAB-Link のご紹介（PR）">
+  <div class="kll-wrap">
+    <p class="kll-label">KINETIC LAB-Link — PR</p>
+    <article class="kll" aria-labelledby="kll-title">
+      <div class="kll__main">
+        <div class="kll__text">
+          <img class="kll__logo" src="image/kl/logo-link.jpg" alt="KINETIC LAB-Link" width="160" height="84">
+          <p class="kll__eyebrow">AI PERSONAL TRAINER</p>
+          <h3 class="kll__title" id="kll-title">矢田 修 の AI が、<br>あなた専属のトレーナーに。</h3>
+          <p class="kll__price">毎日のセルフコンディショニングを、<br>1日わずか <b>約82円</b><small>（5年版）</small>で。</p>
+          <p class="kll__desc">当院の施術の基盤「BCトータルバランスシステム」の考え方を、いつでもあなたの手元に。毎日のコンディション記録から、月の状態に合わせた運動や呼吸法、測定結果への所見まで、AI があなた専用のアドバイスをお届けします。</p>
+          <div class="kll__ctas">
+            <a class="kll__cta" href="https://store.kinetic-lab.com/?ref=sugawara" target="_blank" rel="noopener sponsored">公式ストアで見る ↗</a>
+            <a class="kll__sub" href="https://www.kinetic-lab.com/link/" target="_blank" rel="noopener">機能の詳しい説明（公式サイト）↗</a>
+          </div>
+        </div>
+        <figure class="kll__photo">
+          <img src="image/kl/yada-link.jpg" alt="LAB-Link のセンサー機器を手にする矢田 修" width="1100" height="907" loading="lazy">
+          <figcaption class="kll__name">
+            <span class="kll__role">ロサンゼルス・ドジャース<br>山本由伸投手のパーソナルトレーナー</span>
+            <span class="kll__person">矢田 修</span>
+            <span class="kll__org">矢田接骨院 院長／キネティックフォーラム 代表</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="kll__screens">
+        <p class="kll__screens-h">アプリの画面（最新版）</p>
+        <ul>
+          <li><img src="image/kl/link-app-home.webp" alt="ホーム画面：昨日のコンディションの点数、7日平均、継続日数と今週の変化" width="400" height="796" loading="lazy"><span>毎日のコンディション</span></li>
+          <li><img src="image/kl/link-app-bc.webp" alt="BCバランス画面：本日の月の状態に合わせた運動と呼吸法の案内" width="400" height="788" loading="lazy"><span>月の状態に合わせた運動・呼吸法</span></li>
+          <li><img src="image/kl/link-app-ai.webp" alt="AIアドバイス画面：前回測定の全体所見と身体の傾きを示す3D映像" width="400" height="782" loading="lazy"><span>測定結果への AI 所見</span></li>
+        </ul>
+      </div>
+    </article>
+    <p class="kll__fine">※ KINETIC LAB STORE へのリンクから購入された場合、当院に紹介料が支払われることがあります。施術料金への影響はありません。</p>
+  </div>
+</section>
 
 <!-- Access Section -->
 <section id="access" class="py-24 bg-ecru">
